@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+//GLOBAL
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'; //para poder usar bootstrap
 import './App.css';
 
+//SERVICE
+import getGames from './service/apiCall';
+
+//COMPONENTS
+import Home from './Componentes/Home';
+import NavBar from './Componentes/NavBar';
+
+
 function App() {
+  const genders = getGames().then(res => res.map(game => console.log(game[2])))
+  console.log(genders)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='*' element={} /> */}
+      </Routes>
+    </>
   );
 }
 
 export default App;
+
+
