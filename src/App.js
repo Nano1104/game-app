@@ -1,28 +1,26 @@
 //GLOBAL
-import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, Route, Routes, useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; //para poder usar bootstrap
 import './App.css';
 
 //SERVICE
-import getGames from './service/apiCall';
+import getGames from './service/getGames';
+import getCategories from './service/getCategories'
 
 //COMPONENTS
 import Home from './Componentes/Home';
 import NavBar from './Componentes/NavBar';
+import ListCategoryContainer from './Componentes/ListCategoryContainer';
 
-
-function App() {
-  const genders = getGames().then(res => res.map(game => console.log(game[2])))
-  console.log(genders)
+function App() {                      
   return (
     <>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='*' element={} /> */}
+        <Route path="/category/:name" element={<ListCategoryContainer />} />
+        {/* <Route path='*' element={} /> */}
       </Routes>
     </>
   );

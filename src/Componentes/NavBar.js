@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import getCategories from '../service/getCategories'
+
 export default function NavBar() {  
-    const styles = {margin: '15px 50px', fontFamily: 'IBM Plex Mono', color: 'orange'}
+    const [categories, setCategories] = useState([])
+    const navDropdownStyle = {margin: '15px 50px', fontFamily: 'IBM Plex Mono', color: 'orange'}
+
+    useEffect(() => {
+        getCategories().then(res => setCategories(res))
+    }, [])
 
     return(
         <>
@@ -11,9 +18,17 @@ export default function NavBar() {
                 <div id="icon"></div>
                 <ul>
                     <li><Link to='/'>Home</Link></li>
-                    {/* <li><Link to="/products">Games</Link></li> */}
-                    <NavDropdown title='Games' style={styles}>
-                        
+                    <NavDropdown title='Games' style={navDropdownStyle}>
+                        {
+                        categories.map(category => {
+                            return(
+                            <div className="dropDownItemStyle">
+                                <Link to={`/category/${category}`} className='dropDownLinkStyle' >{category}</Link>
+                                <br />
+                            </div>
+                            )
+                        })
+                        }
                     </NavDropdown>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contact">Contact us</Link></li>
@@ -22,4 +37,5 @@ export default function NavBar() {
         </>
     )
 }
+
 

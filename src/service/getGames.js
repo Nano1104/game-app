@@ -1,20 +1,18 @@
 import React from "react"
-
+const api = 'https://www.freetogame.com/api/games'
 
 export default function getGames() {
-    /* const apiUrl = `https://www.freetogame.com/api/games?category=${keyword}` */
-    const api = 'https://www.freetogame.com/api/games'
     return fetch(api)
-        .then(res => res.json())
-        .then(res => {
-            const dataGames = res.map(game => {
-                const { id, title, genre} = game;
-                return [id, title, genre]
+            .then(res => res.json())
+            .then(res => {
+                const dataGames = res.map(game => {
+                    const { id, title, genre } = game
+                    return [id, title, genre]
+                })
+                return dataGames
             })
-            return dataGames
-        })
 }
- 
+
 
 /* export const arrayImages = [
     'https://www.freetogame.com/g/540/thumbnail.jpg',
