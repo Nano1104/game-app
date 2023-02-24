@@ -12,6 +12,8 @@ import getCategories from './service/getCategories'
 import Home from './Componentes/Home';
 import NavBar from './Componentes/NavBar';
 import ListCategoryContainer from './Componentes/ListCategoryContainer';
+import ListDetailContainer from './Componentes/ListDetailContainer';
+import Error404 from './Componentes/Error404';
 
 function App() {                      
   return (
@@ -19,8 +21,10 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/category/:name" element={<ListCategoryContainer />} />
-        {/* <Route path='*' element={} /> */}
+        <Route path="/category/:gameCategory" element={<ListCategoryContainer />} />
+        <Route path="/detail/:gameName" element={<ListDetailContainer />} />
+
+        <Route path='*' element={<Error404 />} />
       </Routes>
     </>
   );

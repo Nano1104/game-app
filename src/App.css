@@ -6,6 +6,13 @@
     src: url(./service/AtariClassic-gry3.ttf);
 }
 
+:root {
+    --main-font: 'IBM Plex Mono', monospace;
+
+    --orange: rgb(219, 142, 0);
+    --dark-blue: rgb(50, 56, 62); 
+}
+
 *,
 ::after,
 ::before {
@@ -43,13 +50,13 @@ li {
 
 a {
     text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
-    color: orange;
+    font-family: var(--main-font);
+    color: var(--orange);
 }
 
 h1 {
     position: absolute;
-    color: rgb(219, 142, 0);
+    color: var(--orange);
     font-size: 5em;
     font-family: atari;
 }
@@ -64,7 +71,6 @@ h1 {
 }
 
 .titleContainer {
-    /* outline: 1px solid white; */
     position: relative;
     width: 500px;
     height: 225px;
@@ -78,7 +84,7 @@ h1 {
     position: absolute;
     color: white;
     font-size: 1.7em;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--main-font);
     color: rgb(255, 194, 81);
     top: 200px;
     left: 80px;
@@ -110,7 +116,7 @@ h1:hover {
     font-size: 18px;
 }
 .dropDownItemStyle:hover {
-    background-color: orange;
+    background-color: var(--dark-blue);
     box-shadow: 0px 0px 5px black;
 }
 
@@ -119,6 +125,54 @@ h1:hover {
 }
 .dropDownLinkStyle:hover {
     font-weight: 700;
+}
+
+.gameList {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 270px 270px 270px 270px;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.gameCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    color: var(--orange);
+    padding: 0px 50px;
+    background-color: var(--dark-blue);
+    box-shadow: 0px 0px 5px black;
+    border-radius: 5px;
+    font-family: var(--main-font);
+}
+.gameCard:hover {
+    transition: .3s all;
+    transform: scale(1.02, 1.02);
+}
+
+/* .gameCardHover {
+    outline: 1px solid red;
+    width: 270px;
+    height: 220px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.gameCardLink {
+    font-weight: 1000;
+    color: orange;
+}
+
+
+/****************************************   GAME DETAIL *************************/
+.gameDetail {
+    color: white
 }
 
 /****************************************************************************************/

@@ -5,20 +5,22 @@ import getGames from '../service/getGames';
 import GamesList from './GamesList.js';
 
 export default function ListCategoryContainer () {
-    const { name } = useParams()
+    const { gameCategory } = useParams()
     const [games, setGames] = useState([])
     
     useEffect(() => {
       getGames().then(res => {
-        const gamesWithRightCategory = res.filter(game => game[2] === name)
+        const gamesWithRightCategory = res.filter(game => game[2] === gameCategory)
         setGames(gamesWithRightCategory)
       })
-
-      console.log(games)
-    }, [name])
+    }, [gameCategory])
 
     return (
-      <GamesList games={games} />
+      <>
+        <div className='gameList'>
+          <GamesList games={games} />
+        </div>
+      </>
     )
   }
 
