@@ -13,7 +13,15 @@ export default function ListDetailContainer() {
         getGames()
             .then(res => {
                 const currentGame = res.find(game => game[1] === gameName) //gets the same game as the one from the url
-                setGame({id: currentGame[0], title: currentGame[1], genre: currentGame[2]}) //converts the arr to object
+                setGame({
+                        id: currentGame[0], 
+                        title: currentGame[1], 
+                        genre: currentGame[2], 
+                        img: currentGame[3],
+                        description: currentGame[4],
+                        platform: currentGame[5],
+                        releaseDate: currentGame[6]
+                    }) //converts the arr to object
             })
     }, [])
 

@@ -3,6 +3,14 @@ import React from 'react';
 export default function Error404() {
 
     return(
-        <h1>ERROR 404!</h1>
+      <>
+        <div id="errorContainer">
+            <div className='titleErrorContainer '>
+                <h1 className='titleErrorContainer__h1-game'>GAME</h1>
+                <h1 className='titleErrorContainer__h1-over'>OVER</h1>
+            </div>
+            <h3 id="errorMessage">Error 404!</h3>
+        </div>
+      </>
     )
 }

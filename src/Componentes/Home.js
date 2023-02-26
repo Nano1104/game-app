@@ -7,7 +7,7 @@ export default function Home() {
         <>
             <img src={control} className='control'/>
             <div className='titleContainer'>
-                <h1>Vasco</h1>
+                <h1 id='title-1'>Vasco</h1>
                 <h1 id='title-2'>Games</h1>
                 <p>Video Game Shop</p>
             </div>
