@@ -1,0 +1,61 @@
+.counter-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+}
+
+.counter-container__div {
+   /*  border: 1px solid white; */
+    width: 275px;
+    display: flex;
+    margin-right: 50px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.counter-container__div input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #aaa;
+}
+
+/* BTN GLOBAL STYLES */
+.counter-container__btnLess, .counter-container__btnPlus {
+    box-shadow: 0px 0px 3px black;
+    width: 50px;
+    border: none;
+    transition: .2s all;
+}
+
+/* BTNS */
+.counter-container__btnPlus {
+    background-color: greenyellow;
+}
+.counter-container__btnPlus:hover {
+    background-color: hwb(84 10% 31%);   
+}
+
+.counter-container__btnLess {
+    background-color: rgb(247, 93, 37);
+}
+.counter-container__btnLess:hover {
+    background-color: rgb(251, 79, 16);
+}
+
+.counter-container__btnAdd {
+    font-size: 20px;
+    background: none;
+    border: none;
+    width: 25%;
+    border-radius: 5px;
+    padding: 1px;
+    margin-top: 15px 0px;
+    background-color: var(--orange);
+}
+.counter-container__btnAdd:hover {
+    transition: .2s all;
+    background-color: var(--light-orange);
+    box-shadow: 0px 0px 5px black;
+}

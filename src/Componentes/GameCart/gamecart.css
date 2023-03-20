@@ -1,0 +1,75 @@
+.gameCart {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 315px;
+    margin: 10px;
+    padding: 15px;
+    background-color: var(--dark-blue);
+    box-shadow: 0px 0px 5px black;
+    border-radius: 10px;
+}
+.gameCart:hover {
+    transition: .2s all;
+    transform: scale(1.05, 1.05);
+}
+
+.gameCart__id {
+    margin-bottom: 5px;
+}
+
+.gameCart-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameCart-description__p {
+    text-align: center;
+    font-size: 20px;
+    color: var(--orange);
+}
+.gameCart-description__p:hover {
+    transition: .2s all;
+    color: orangered;
+}
+
+
+
+
+
+.gameCart-description__div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.gameCart-description__div > * {
+    margin: 0px 5px;
+}
+
+.gameCart-description__div button {
+    border: none;
+    background: none;
+    padding: 5px;
+    background-color: var(--light-blue);
+    width: 30px;
+    border-radius: 50%;
+    color: black;
+}
+.gameCart-description__div button:hover {
+    transition: .1s all;
+    color: gray;
+    box-shadow: 0px 0px 3px black;
+}
+
+.trash-bin {
+    color: var(--light-blue);
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.trash-bin:hover {
+    transition: .1s all;
+    color: white;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
-import control from '../images/control.png';
-import NavBar from './NavBar'
+import control from '../../images/control.png';
+import NavBar from '../../Componentes/NavBar/NavBar'
+import './home.css';
+
 
 export default function Home() {
     return (

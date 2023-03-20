@@ -1,0 +1,35 @@
+
+#form {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contact-img {
+    outline: 1.5px solid white;
+    width: 400px;
+    height: 475px;
+    background-color: orange;
+    margin: 25px 50px
+}
+
+.form__h1-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title {
+    color: orange;
+    font-family: atari;
+    position: absolute;
+    top: 0;
+    right: 250px;
+    margin-top: 25px;
+}
+.contact-title:hover {
+    transition: .1s all;
+    color: orangered;
+}

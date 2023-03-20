@@ -1,31 +1,43 @@
 //GLOBAL
-import React, { useState, useEffect } from 'react';
-import { Link, Route, Routes, useParams } from 'react-router-dom';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; //para poder usar bootstrap
 import './App.css';
 
 //COMPONENTS
-import Home from './Componentes/Home';
-import NavBar from './Componentes/NavBar';
-import ListCategoryContainer from './Componentes/ListCategoryContainer';
-import ListDetailContainer from './Componentes/ListDetailContainer';
-import About from './Componentes/About';
-import ContactItem from './Componentes/ContactItem';
-import Error404 from './Componentes/Error404';
+import NavBar from './Componentes/NavBar/NavBar';
+import Contact from './Pages/Contact/Contact';
+import Error404 from './Componentes/Error404/Error404';
+import Cart from './Componentes/Cart/Cart';
 
-function App() {                      
+//CONTEXT 
+import { CartProvider } from './Componentes/Context/Context';
+
+//PAGES
+import Home from './Pages/Home/Home';
+import ListCategoryContainer from './Pages/ListCategoryContainer/ListCategoryContainer';
+import ListDetailContainer from './Pages/ListDetailContainer/ListDetailContainer';
+import FinishPurchase from './Pages/FinishPurchase/FinishPurchase';
+
+function App() {      
+
   return (
     <>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/category/:gameCategory" element={<ListCategoryContainer />} />
-        <Route path="/detail/:gameName" element={<ListDetailContainer />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<ContactItem />} />
+      <CartProvider>
 
-        <Route path='*' element={<Error404 />} />
-      </Routes>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:gameCategory" element={<ListCategoryContainer />} />
+          <Route path="/detail/:gameName" element={<ListDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/finishpurchase" element={<FinishPurchase />} />
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path='*' element={<Error404 />} />
+        </Routes>    
+
+        </CartProvider>
     </>
   );
 }

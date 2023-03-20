@@ -1,0 +1,60 @@
+#icon {
+    background-image: url(../../images/favicon.ico.ico);
+    background-size: cover;
+    width: 55px;
+    height: 50px;
+    margin-left: 70px;
+    cursor: pointer;
+    display: none;
+}
+
+.control {
+    position: absolute;
+    left: 775px;
+    bottom: 30px;
+    width: 42%;
+    animation: fadeInUpBig;
+    animation-duration: 3s;
+}
+
+.shopping-cart-container:hover {
+    transition: .2s all;
+    transform: scale(1.1, 1.1);
+}
+
+.shopping-cart-container__icon {
+    font-size: 2em;
+    color: var(--blue);
+    margin-left: 70px;
+    cursor: pointer;
+    padding: 5px;
+    box-sizing: content-box;
+}
+.shopping-cart-container__icon:hover {
+    color: #386cce;
+}
+.shopping-cart-container__count {
+    padding: 1px;
+    background-color: orangered;
+    border-radius: 50%;
+    color: black;
+    font-family: var(--main-font);
+    font-weight: 700;
+    position: absolute;
+}
+
+.dropDownItemStyle {
+    text-align: center;
+    font-size: 18px;
+}
+.dropDownItemStyle:hover {
+    background-color: var(--dark-blue);
+    box-shadow: 0px 0px 5px black;
+}
+
+.dropDownLinkStyle {
+    color: blue;
+}
+.dropDownLinkStyle:hover {
+    font-weight: 700;
+}

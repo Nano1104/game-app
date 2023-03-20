@@ -1,0 +1,101 @@
+
+.form-container {
+    font-family: var(--main-font);
+    border-top: 10px groove var(--orange);
+    border-left: 10px groove var(--orange);
+    color: white;
+    width: 750px;
+    height: 425px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #2e3e44;
+    box-shadow: 0px 0px 5px black;
+
+    animation: fadeInBottomRight;
+    animation-duration: 2s;
+}
+
+.form-container__div-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container__div-input input {
+    text-align: center;
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+    margin: 15px 0px;
+}
+
+.form-container__div-input textarea {
+    background: none;
+    text-align: center;
+    border: 2px solid white;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    color: orange;
+}
+
+.div-input__button {
+    margin: 15px 0px;
+    padding: 3px 0px;
+    border: none;
+    background: none;
+    color: black;
+    background-color: var(--blue);
+    box-shadow: 0px 0px 5px black;
+    border-radius: 20px;
+    font-family: var(--main-font);
+}
+.div-input__button:hover {
+    transition: .3s all;
+    transform: scale(1.05, 1.05);
+    color: white;
+}
+
+
+
+.form-container__div-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container__div-text h3 {
+    font-family: atari;
+    color: var(--blue);
+}
+
+.div-text__icons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 23px;
+}
+
+.icons {
+    color: white;
+}
+
+.icon:hover {
+    transition: .2s all;
+}
+#facebook:hover {
+    color: var(--blue);
+}
+#instagram:hover {
+    color: var(--orange);
+}
+#twitter:hover {
+    color: aqua;
+}
+

@@ -1,0 +1,79 @@
+.gameDetail {
+    font-family: var(--main-font);
+    color: white;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    width: 75%;
+    height: 80vh;
+    background-color: var(--dark-blue);
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px black;
+
+    animation: fadeInRightBig;
+    animation-duration: 1s;
+}
+
+.gameDetail div {
+    margin: 0px 20px;
+}
+
+.gameDetail span {
+    color: var(--orange);
+    font-weight: 800;
+}
+
+.gameDetail__img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.gameDetail__img-container img {
+    width: 385px;
+    height: 226px;
+    margin: 12px 0px;
+}
+
+.gameDetail__img-btnBack {
+    font-size: 20px;
+    background: none;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    background-color: var(--light-blue);
+    bottom: 90px;
+}
+.gameDetail__img-btnBack:hover {
+    transition: .2s all;
+    background-color: var(--blue);
+    box-shadow: 0px 0px 5px black;
+}
+
+
+
+.gameDetail__description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gameDetail__description-container hr {
+    border: 1px solid var(--orange);
+    width: 100%;
+}
+
+.gameDetail__description-container h3 {
+    font-family: atari;
+    color: orangered;
+}
+
+.description-container__div {
+    display: flex;
+    width: 100%;
+    outline: 2px solid white;
+}
