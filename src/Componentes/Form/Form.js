@@ -6,18 +6,33 @@ import { BsInstagram, BsTwitter } from 'react-icons/bs';
 import './form.css';
 
 export default function Form() {
-    const [state, setState] = useState(null)
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(state)
+        if(name == '') {
+            e.preventDefault()
+            alert('sorry you must fill name input')
+        }
+        if(email == '') {
+            alert('sorry you must fill email input')
+            e.preventDefault()
+        }
+    }
+
+    const handleValidName = (e) => {
+        setName(e.target.value)
+    }
+
+    const handleValidEmail = (e) => {
+        setEmail(e.target.value)
     }
 
     return(
         <form onSubmit={(e) => handleSubmit(e)} className="form-container">
             <div className="form-container__div-input">
-                <input type="text" placeholder='Full Name' className="input"></input>
-                <input type="email" placeholder="E-mail" className="input"></input>
+                <input type="text" placeholder='Full Name' className="input" onChange={handleValidName}></input>
+                <input type="email" placeholder="E-mail" className="input" onChange={handleValidEmail}></input>
                 <textarea className="div-input__textarea input" placeholder="Message"></textarea>
                 <button className="div-input__button">Contact Us</button>
             </div>

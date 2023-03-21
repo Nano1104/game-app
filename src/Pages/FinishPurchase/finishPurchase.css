@@ -1,0 +1,18 @@
+
+.finishPurchase__title {
+    font-size: 3em;
+    margin: 50px auto;
+    font-family: atari;
+    color: var(--orange);
+    text-align: center;
+    width: 80%;
+    text-shadow: 0px 0px 6px black;
+}
+
+.finishPurchase__p {
+    color: orangered;
+    font-size: 2em;
+    text-align: center;
+    font-family: var(--main-font);
+    text-decoration: underline;
+}

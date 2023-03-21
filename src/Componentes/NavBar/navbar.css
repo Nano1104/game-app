@@ -23,7 +23,7 @@
 }
 
 .shopping-cart-container__icon {
-    font-size: 2em;
+    font-size: 2.5em;
     color: var(--blue);
     margin-left: 70px;
     cursor: pointer;
@@ -36,7 +36,9 @@
 .shopping-cart-container__count {
     padding: 1px;
     background-color: orangered;
-    border-radius: 50%;
+    width: 30px;
+    border-radius: 50px;
+    text-align: center;
     color: black;
     font-family: var(--main-font);
     font-weight: 700;

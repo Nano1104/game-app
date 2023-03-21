@@ -1,17 +1,16 @@
 
 .form-container {
     font-family: var(--main-font);
-    border-top: 10px groove var(--orange);
-    border-left: 10px groove var(--orange);
+    border: 10px groove var(--orange);
     color: white;
-    width: 750px;
+    width: 700px;
     height: 425px;
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 20px;
+    bottom: 20px;
     background-color: #2e3e44;
     box-shadow: 0px 0px 5px black;
 
